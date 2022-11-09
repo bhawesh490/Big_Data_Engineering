@@ -1,11 +1,63 @@
 ## Assignment Part-1
+
 Q1. Why do we call Python as a general purpose and high-level programming language?
 
-A1:Python is called general purpose and high level programming langauge because 
+A1.Python is called general purpose and high level programming langauge because 
     1-its easy to code and understand.
     2-low level languages are more closer to machine codes(0,1,binary codes) while high level languages are more closer to general human communication language[English in this case].
     3-Codes are easily readable to others so its a general purpose language
     4-It is portable means it can run on any system including Windows,Mac,Linux.
     5-Supports Development in Aritifical Intelligence.
-    6-Codes Written in General English are converted to Machine Language[Binary Codes] using Interpretter and Complier hence no need of processor.
-    7-Beacuse of the above stated reason Python is a general and High Level Language
+    6-Codes Written in General English are converted to Machine Language[Binary Codes] 
+      using Interpretter and Complier hence no need of processor.
+    7-Because of the above stated reason Python is a general and High Level Language.
+
+Q2. Why is Python called a dynamically typed language?
+A2. Python is called Dynamically typed langauage because we dont have to define type of variable while assigning any variable.
+it takes care of the type of variable.
+example:
+in other langauges when have to define type as 
+var a=10:
+var b=20 
+but in python we can simply define variables as 
+a=10
+b=20 etc
+
+Q3. List some pros and cons of Python programming language?
+A3.Pros
+1-Easy to understand and code
+2-Dynamic type language
+3-it have many libraries like pandas which can be used in data analysis
+4-its higly scalable/Instagram,facebook and pinterest are use the power of python
+5-Extensively used in Artificial Intelligence,Machine Learning,future technologies like Internet of things[IOT] etc
+6-its portable means it can run on any system[WORA-Write Once and Run Anywhere]
+Cons 
+1-it is slow compared to other non-complied langauges and requires lot of computational power
+2-comes with high memory usages and high memory consumption
+3-its uses reference counting and garbage collection
+4-Multithreading in python
+
+Q4. In what all domains can we use Python?
+A4.Domains where Python can be used:
+1-Data analysis and Data Science
+Data Collection and Cleaning 
+Data Exploration
+Data Modelling 
+Data Visualization 
+2-Machine Learning and Artificial Intelligence 
+3-Deep Learning Frameworks like Caffe,Tensorflow,PyTorch,Keras
+2-Automations 
+3-Web Scraping
+Scrapy and Beautiful Soup 
+4-Distributed Processing 
+PySpark
+Dask 
+5-Finance
+Fraud Detection
+risk analytics
+credit scoring 
+6-Big Data 
+7-Data Engineering 
+8-Job Scheduling with Airflow 
+9-Natural Language Processing 
+
