@@ -61,3 +61,70 @@ credit scoring
 8-Job Scheduling with Airflow 
 9-Natural Language Processing 
 
+Q5. What are variable and how can we declare them?
+A5.Variable in python are memory locations to store values.
+a variable in python program gives data to the computer for processing.
+how to declare a variable:
+a variable in python can be declared by any name or even alphabet like a,aa,abc etc can be used 
+example:
+lets understand the concept of datatypes in variables now:
+data types can be integer,strings,arrays,float,dictionary,list,typles 
+name="Bhawesh" 
+here we have declared a variable called name and assigned value "Bhawesh" to it.
+Note:name variable is of string data types and enclosed in double quotes.
+now lets declare a int variable:
+number=10
+n=10 
+in the above example we have declared a interger variable called number and assigned 10 to it 
+alternatively we can assign the same value to the variable n 
+Note:
+variable defining can sometimes be very tricky for developers and it has to be of some sense so that it can be easily understood by other programmers 
+
+Q6. How can we take an input from the user in Python?
+A6.we can take input from user in python by defining input()
+Example 1:
+name=input("Enter Your Name: ")
+age = input("Enter Your Age: ")
+print("Hi "+name+" Your age is:"+str(age))
+
+Example 2:
+number1=input("Please enter no.1-")
+number2=input("Please enter no.2-")
+print ("the sum of two numbers are",(int(number1)+int(number2)))
+
+Q7. What is the default datatype of the value that has been taken as an input using input() function?
+A7.string
+
+Q8. What is type casting?
+A8.Type casting refers to the conversion of the datatype 
+lets consider these functions 
+int() refers to the interger conversion
+float() refers to the float conversions
+str() refers to the string or text conversion
+Lets consider below examples:
+a=10
+b=10.2
+c="1"
+
+# lets define the below variables:
+
+a=10
+b=10.1
+c="1"
+
+print ("the type of a is",type(a))
+print ("the type of b is",type(b))
+print ("the type of c is",type(c))
+
+# lets add variable b and c:
+# d=b+c
+# print ("the sum of b and c is:",d)
+# here it will give error because we are trying to add b which is float and c which is string 
+# to tackle ths we need to convert c which is looking like integer to integer 
+# so 
+
+d=b+int(c)
+print ("the sum of b and c is: ",d)
+Important:
+Here it was possible to add b and c because we have converted c which was string type to interger type 
+this was the case of typecasting
