@@ -142,4 +142,137 @@ print ("Number of teachers in class: ",x)
 print ("Number of girls in the class :",y)
 print ("Number of boys in the class :",z)
 
+Q10. What are keywords?
+A10.Keywords are special words reserved in python 
+we cannot use them in variables 
+As of now in latest version of python 3.8 there are 38 keywords
+Let us list few of the keywords 
+1-True 
+2-False 
+3-else 
+4-Break,in ,is,lambdaa,global,conditional statements etc 
+Basically all that are used in programming langauges given by python itself are called keywords 
+
+Q11. Can we use keywords as a variable? Support your answer with reason.
+A11.No Keywords cannot be used as variable 
+Example:
+Suppose we define a keyword called if as variable:
+if="bhawesh"
+print(if)
+it will throw error saying invalid syntax 
+
+Q12. What is indentation? What's the use of indentaion in Python?
+A12.Python used indentation to identify a block of code 
+in other langauge indentation is for readibility purpose only 
+lets us look this with an example:
+in java script we use curlibraces {} instead on identation 
+Example:
+if(a==10){
+
+  logger.log("a is equal to 10)
+}
+
+else{
+
+  logger.log("a is not equal to 10)
+
+}
+
+Now the same above code is used in python by way of indentation 
+if a==10:
+  print ("a is equal to 10")
+else:
+  print ("a is not equal to 10")
+
+
+Q13. How can we throw some output in Python?
+A13.Using Print() function 
+Example:
+a=10 
+b=20
+d=a+b
+print ("the sum of a and b is",d)
+output will be:
+the sum of a and b is 30 
+
+Q14. What are operators in Python?
+A14.Operators in Python:
+Operators in python are used to perform operation in variables and values 
+Example:print (10+5)
+There are different types of operators in python
+1-Airthmetic Operators
+2-Assignment Operators 
+3-Comparison Operatiors 
+4-Logical Operators 
+5-Identiry Operators 
+6-Membership Operators 
+7-Bitwise Operators
+
+1-Addition Operators 
++ Addition 2+3=5
+- Subtraction 3-2=1
+* Multiplication 3*2=6
+/ Division 3/2 =1
+% Modulus 3%2=1
+** Exponentiation 3**2=9 
+// Floor Division 5//3=2
+
+2-Assignment Operators 
+=
+x=2
++=
+x=x+2 or x+=2 
+-=
+x=x-2 or x-=2
+*=
+x=x*3 or x*=3
+/=
+x=x/3 or x/=3
+%=
+x=x%3 or x%=3
+//=
+x=x//3 or x//=3
+**=
+x=x**3 or x**=3
+3-Python Comparison Operators 
+==
+!=
+>
+<
+>=
+
+the result will be boolean in Comparsion Operations (boolean means Either true or false)
+Example:
+3==3 
+will give true 
+4<3
+will give false
+
+4-Python Logical Operators 
+and Return true if both statment are true 
+or Returen true if one of the statment is true 
+not Reverse the result ,returns false if the result is true 
+5-Python Identity Operators 
+is Returns True if both the variables are same object 
+Example x is y 
+is not Returns True if both variables are not the same object 
+Example x is not y 
+6-Python Membership Operators 
+in Returns True if a sequence with the specified value is present in the object
+not in Returns True if a sequence with the specified value is not present in the object
+7-Python Bit Wise Operators 
+these are used to compare binary numbers 
+& (AND) Sets each bit to 1 if both bits are 1 
+| (OR) Sets ech bit to 1 if one of the two bits is 1
+
+Q15. What is difference between / and // operators?
+A15.Both are arithemetic operators 
+/ Means Division 
+// Means floor division which gives only interger part of division not the decimal part 
+Example:
+
+print (3/2)
+Result:1.5
+print (5//3)
+Result:1
 
