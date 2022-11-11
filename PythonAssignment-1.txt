@@ -128,3 +128,18 @@ print ("the sum of b and c is: ",d)
 Important:
 Here it was possible to add b and c because we have converted c which was string type to interger type 
 this was the case of typecasting
+Q9. Can we take more than one input from the user using single input() function? If yes, how? If no, why?
+A9.Yes we can take more than one input from the user using single input() function 
+Example:
+Taking two inputs at a time 
+x, y = input("Enter two values: ").split()
+print("Number of teachers in class: ", x)
+print("Number of students in the class: ", y)
+print ()
+Taking three inputs at a time
+x,y,z=input("Enter three values:").split()
+print ("Number of teachers in class: ",x)
+print ("Number of girls in the class :",y)
+print ("Number of boys in the class :",z)
+
+
