@@ -276,3 +276,175 @@ Result:1.5
 print (5//3)
 Result:1
 
+Q16. Write a code that gives following as an output.
+```
+iNeuroniNeuroniNeuroniNeuron
+----
+A16.
+a="iNeuron"
+b=a*3
+print (b)
+
+Q17. Write a code to take a number as an input from the user and check if the number is odd or even.
+A17.
+a=int(input("Please enter the no. to check "))
+if a%2==0:
+    print (a," is even number")
+else:
+    print (a,"is odd number")
+
+
+
+Q18. What are boolean operator?
+A18.The logical operators and, or and not are also referred to as boolean operators.
+While and as well as or operator needs two operands,which may evaluate to true or false, not operator needs one operand evaluating to true or false.
+Boolean and operator returns true if both operands return true.
+Examples:
+>>> a=10
+>>> b=15
+>>> a>40 and b>40
+False
+>>> a>100 and b<50
+False
+>>> a==0 and b==0
+False
+>>> a>0 and b>0
+True [Because both the values are greater than 0]
+
+Example of Boolean OR
+>>> a=10
+>>> b=15
+>>> a>30 or b>5
+True
+>>> a>100 or b<50
+True
+>>> a==0 or b==0
+False
+>>> a>0 or b>0
+True
+Example:
+The not operator returns true if its operand is a false expression and returns false if it is true.
+>>> a=10
+>>> a>10
+False
+>>> not(a>10)
+True
+
+Q19. What will the output of the following?
+```
+1 or 0
+
+0 and 0
+
+True and False and True
+
+1 or 0 or 0
+```
+A19.
+1 or 0 = 1
+
+0 and 0 = 0
+
+True and False and True=False
+
+1 or 0 or 0=1
+
+Q20. What are conditional statements in Python?
+A20.
+Python supports these Logical Operators 
+Equals: x == y
+Not Equals: x != y
+Less than: x < y
+Less than or equal to: x <= y
+Greater than: x > y
+Greater than or equal to: x >= y
+These conditions can be used in several ways, most commonly in 
+"if statements" and loops.
+An "if statement" is written by using the if keyword.
+
+Example
+If statement:
+
+x = 1000
+y = 999
+if x > y:
+  print("x is greater than y")
+Result:True so it will print x>y
+
+Q21. What is use of 'if', 'elif' and 'else' keywords?
+A21.Thease are conditional statment as are used in programming 
+Example:
+Following Conditions has been given and we have to print statement according to the below conditions 
+age above 80
+Senior Citizen
+Age between 60  and 80 
+Old Aged 
+Age between  30 and 60
+Mid Aged 
+less than 30 
+Young
+age=int(input("Enter Your Age"))
+
+if (age>=80):
+  print ("Senior Citizen")
+elif (age>=60):
+  print ("Old Aged")
+elif (age >=30)
+  print ("Mid Aged")
+else:
+  print ("Young:)
+
+Q22. Write a code to take the age of person as an input 
+and if age >= 18 display "I can vote". If age is < 18 display "I can't vote".
+A22.
+age=int(input("Enter Your Age"))
+if age>=18:
+  print ("I Can vote)
+else:
+  print ("I can't vote)
+ 
+Q23. Write a code that displays the sum of all the even numbers from the given list.
+```
+numbers = [12, 75, 150, 180, 145, 525, 50]
+
+```
+A23.
+numbers=[12, 75, 150, 180, 145, 525, 50]
+sum=0
+for i in numbers:
+  if (i%2==0):
+    sum=sum+i
+
+print ("Sum of all Even Numbers is",sum)
+
+
+Q24. Write a code to take 3 numbers as an input from the user and display the greatest no as output.
+no1=int(input("Enter no1: "))
+no2=int(input("Enter no2: "))
+no3=int(input("Enter no3: "))
+list=[no1,no2,no3]
+greatest=no1
+for i in range(1,len(list)):
+    if list[i]>greatest:
+        greatest=list[i]
+
+print (greatest)
+
+Q25. Write a program to display only those numbers from a list that satisfy the following conditions
+
+- The number must be divisible by five
+
+- If the number is greater than 150, then skip it and move to the next number
+
+- If the number is greater than 500, then stop the loop
+```
+numbers = [12, 75, 150, 180, 145, 525, 50]
+```
+A25.
+numbers = [12, 75, 150, 180, 145, 525, 50]
+for i in numbers:
+    # print (i)
+    if i>500:
+        break
+    elif (i%5==0 and i<150):
+        print (i)
