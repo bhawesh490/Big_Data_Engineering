@@ -44,6 +44,7 @@ Data Collection and Cleaning
 Data Exploration
 Data Modelling 
 Data Visualization 
+
 2-Machine Learning and Artificial Intelligence 
 3-Deep Learning Frameworks like Caffe,Tensorflow,PyTorch,Keras
 2-Automations 
@@ -66,7 +67,7 @@ A5.Variable in python are memory locations to store values.
 a variable in python program gives data to the computer for processing.
 how to declare a variable:
 a variable in python can be declared by any name or even alphabet like a,aa,abc etc can be used 
-example:
+Example:
 lets understand the concept of datatypes in variables now:
 data types can be integer,strings,arrays,float,dictionary,list,typles 
 name="Bhawesh" 
@@ -234,6 +235,7 @@ x=x%3 or x%=3
 x=x//3 or x//=3
 **=
 x=x**3 or x**=3
+
 3-Python Comparison Operators 
 ==
 !=
@@ -252,14 +254,17 @@ will give false
 and Return true if both statment are true 
 or Returen true if one of the statment is true 
 not Reverse the result ,returns false if the result is true 
+
 5-Python Identity Operators 
 is Returns True if both the variables are same object 
 Example x is y 
 is not Returns True if both variables are not the same object 
 Example x is not y 
+
 6-Python Membership Operators 
 in Returns True if a sequence with the specified value is present in the object
 not in Returns True if a sequence with the specified value is not present in the object
+
 7-Python Bit Wise Operators 
 these are used to compare binary numbers 
 & (AND) Sets each bit to 1 if both bits are 1 
@@ -269,8 +274,8 @@ Q15. What is difference between / and // operators?
 A15.Both are arithemetic operators 
 / Means Division 
 // Means floor division which gives only interger part of division not the decimal part 
-Example:
 
+Example:
 print (3/2)
 Result:1.5
 print (5//3)
@@ -322,6 +327,7 @@ True
 False
 >>> a>0 or b>0
 True
+
 Example:
 The not operator returns true if its operand is a false expression and returns false if it is true.
 >>> a=10
