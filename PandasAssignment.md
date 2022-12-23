@@ -22,7 +22,8 @@ print(df)
 <!-- apply the dtype attribute -->
 result = df.dtypes
 print("Types of Columns in dataframe is")
-print(result)```
+print(result)
+```
 
 Q3. How do you select rows from a Pandas DataFrame based on a condition?
 A3.lets assume we have a dataframe like 
