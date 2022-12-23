@@ -47,9 +47,8 @@ df.iloc[((df['Col1']=='Bangalore')&(df['Col2']==5)),:]
 lets assume we have to get a dataframe with Col1 as Bangalore or Pune 
 
 df.iloc[((df['Col1']=='Bangalore')|(df['Col1']=='Pune')),:]
-
-|=OR Operator 
-&=AND Operator
+|= OR Operator 
+&= AND Operator
 ---
 
 ### Q4. How do you rename columns in a Pandas DataFrame?
