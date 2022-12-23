@@ -25,27 +25,31 @@ print("Types of Columns in dataframe is")
 print(result)
 ```
 
-Q3. How do you select rows from a Pandas DataFrame based on a condition?
+### Q3. How do you select rows from a Pandas DataFrame based on a condition?
 A3.lets assume we have a dataframe like 
 df = pd.DataFrame({'Col1':["Bangalore","Pune","Delhi","Hyderabad","Bangalore"],
  'Col2':[1,2,3,4,5])
 
-case 1
+**Case 1**
+
 lets suppose we have to filter out only Bangalore city we will use this
 
 df.iloc[df['Col1']=='Bangalore',:]
 
-case 2
+**Case 2**
+
 lets assume we have to get a dataframe with Col1 as Bangalore and Col2 with Number 5 
+
 df.iloc[((df['Col1']=='Bangalore')&(df['Col2']==5)),:]
 
-case 3
+**Case 3**
 lets assume we have to get a dataframe with Col1 as Bangalore or Pune 
 
 df.iloc[((df['Col1']=='Bangalore')|(df['Col1']=='Pune')),:]
 
 |=OR Operator 
 &=AND Operator
+
 
 Q4. How do you rename columns in a Pandas DataFrame?
 A4.Using Rename Method
