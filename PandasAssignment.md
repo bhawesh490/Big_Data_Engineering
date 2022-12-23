@@ -27,7 +27,7 @@ print(result)
 
 ### Q3. How do you select rows from a Pandas DataFrame based on a condition?
 A3.lets assume we have a dataframe like 
----
+
 df = pd.DataFrame({'Col1':["Bangalore","Pune","Delhi","Hyderabad","Bangalore"],
  'Col2':[1,2,3,4,5])
 
@@ -49,7 +49,7 @@ lets assume we have to get a dataframe with Col1 as Bangalore or Pune
 df.iloc[((df['Col1']=='Bangalore')|(df['Col1']=='Pune')),:]
 |= OR Operator 
 &= AND Operator
----
+
 
 ### Q4. How do you rename columns in a Pandas DataFrame?
 
