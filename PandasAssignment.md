@@ -187,7 +187,7 @@ df=df.groupby(['city', 'district']).agg({"Population": 'min',
 A12.The **pivot()** function is used to reshaped a given DataFrame organized by given index / column values. 
 This function does not support data aggregation, multiple values will result in a MultiIndex in the columns.
 ```
-**Syntax:**
+Syntax:
 
 DataFrame.pivot(index=None, columns=None, values=None)
 index:Column to use to make new frame’s index. If None, uses existing index.
@@ -196,7 +196,7 @@ values:Column(s) to use for populating new frame’s values.
 If not specified, all remaining columns will be used and the result will have hierarchically indexed columns.
 ```
 ```
-**Example:**
+Example:
 df = pd.DataFrame({'aaa': ['one', 'one', 'one', 'two', 'two',
                            'two'],
                    'bbb': ['P', 'Q', 'R', 'P', 'Q', 'R'],
@@ -207,29 +207,31 @@ df = pd.DataFrame({'aaa': ['one', 'one', 'one', 'two', 'two',
 df.pivot(index='aaa', columns='bbb', values='ccc')
 ```
 
-Q13. How do you change the data type of a column in a Pandas DataFrame?
-A13.DataFrame.astype() method is used to cast pandas object to a specified dtype. 
-
+### Q13. How do you change the data type of a column in a Pandas DataFrame?
+A13.DataFrame astype() method is used to cast pandas object to a specified dtype. 
+```
 df = pd.DataFrame({
     'A': [1, 2, 3, 4, 5],
     'B': ['Bhawesh', 'Shubham', 'Ravi', 'Kiran', 'Puran'],
     'C': [1.1, '1.0', '1.3', 2, 5]})
  
-# converting all columns to string type
+<!-- converting all columns to string type -->
 df = df.astype(str)
+```
 
-We can use other method to change columns datatypes
+**We can use other method to change columns datatypes**
 
 Dataframe to that type, or we can pass a dictionary having column names as keys and datatype 
 as values to change the type of selected columns. 
-
+```
 import pandas as pd
 df = pd.DataFrame({
     'A': [1, 2, 3, 4, 5],
     'B': ['a', 'b', 'c', 'd', 'e'],
     'C': [1.1, '1.0', '1.3', 2, 5]})
  
-# using dictionary to convert specific columns
+<!-- using dictionary to convert specific columns -->
+
 convert_dict = {'A': float,
                 'C': int
                 }
@@ -237,18 +239,21 @@ convert_dict = {'A': float,
 df = df.astype(convert_dict)
 print(df.dtypes)
 
+```
 
-Q14. How do you sort a Pandas DataFrame by a specific column?
+### Q14. How do you sort a Pandas DataFrame by a specific column?
 A14.
+```
 sorted_df = df.sort_values(by=['Column_name'], ascending=True)
+```
 
-Q15. How do you create a copy of a Pandas DataFrame?
+### Q15. How do you create a copy of a Pandas DataFrame?
 
 A15. Using copy() method
-The copy() method returns a copy of the DataFrame.
+The **copy()** method returns a copy of the DataFrame.
 
 By default, the copy is a "deep copy" meaning that any changes made in the original DataFrame will NOT be reflected in the copy.
-
+```
 import pandas as pd
 data = {
 "name": ["Bhawesh", "Chetan", "Kamal"],
@@ -256,12 +261,14 @@ data = {
 }
 
 df = pd.DataFrame(data)
-#Make a copy:
+
+<!-- Make a copy: -->
 newdf = df.copy()
 print(newdf)
-
-Q16. How do you filter rows of a Pandas DataFrame by multiple conditions?
+```
+### Q16. How do you filter rows of a Pandas DataFrame by multiple conditions?
 A16.
+```
 import pandas as pd
 dataFrame = pd.DataFrame({'Name': ['Bhawesh', ' Kamal', 'Rahul',' Hardik ', 'Ankit', 'Ramesh'],
                            
@@ -270,15 +277,16 @@ dataFrame = pd.DataFrame({'Name': ['Bhawesh', ' Kamal', 'Rahul',' Hardik ', 'Ank
                           'Salary': [10000, 93000, 88000, 120000, 94000, 95000],
                            
                           'JOB': ['Analyst', 'Engineer', 'Data Engineer', 'Officer','IT', 'Musician']})
-# filter dataframe
+<!-- filter dataframe -->
 dataFrame.loc[(dataFrame['Salary']>=100000) & (dataFrame['Age']< 40) & (dataFrame['JOB'].str.startswith('D')),
                     ['Name','JOB']])
 
-&=And Operator
-|=Or Operator
+<!-- &=And Operator -->
+<!-- |=Or Operator -->
 
+```
 
-Q17. How do you calculate the mean of a column in a Pandas DataFrame?
+### Q17. How do you calculate the mean of a column in a Pandas DataFrame?
 A17.
 Using Mean Method on a single column 
 df=df.loc['Column Name'].mean()
@@ -327,35 +335,41 @@ print(data)
 # correlation between column 1 and column2
 print(data['column1'].corr(data['column2']))
 
-Q20. How do you select specific columns in a DataFrame using their labels?
-A20.Using loc 
-
+### Q20. How do you select specific columns in a DataFrame using their labels?
+A20.
+Using loc 
+```
 df=df.loc[:,['ColA':'ColB','ColC','ColD']]
+```
 
-Q21. How do you select specific rows in a DataFrame using their indexes?
+### Q21. How do you select specific rows in a DataFrame using their indexes?
 A21.Using Loc 
+
 select the rows with index labels '3', '6', and '9'
-df.loc[[3, 6, 9]]
+
+`df.loc[[3, 6, 9]]`
 
 Using iloc 
 
 select the 3rd, 4th, and 5th rows of the DataFrame
-df.iloc[[2, 3, 4]]
+`df.iloc[[2, 3, 4]]`
 
-The Difference Between .iloc and .loc
+**The Difference Between .iloc and .loc**
+
 The examples above illustrate the subtle difference between .iloc an .loc:
 
-.iloc selects rows based on an integer index. So, if you want to select the 5th row in a DataFrame, you would use df.iloc[[4]] since the first row is at index 0, the second row is at index 1, and so on.
-.loc selects rows based on a labeled index. So, if you want to select the row with an index label of 5, you would directly use df.loc[[5]].
+1. .iloc selects rows based on an integer index. So, if you want to select the 5th row in a DataFrame, you would use df.iloc[[4]] since the first row is at index 0, the second row is at index 1, and so on.
+2. .loc selects rows based on a labeled index. So, if you want to select the row with an index label of 5, you would directly use df.loc[[5]].
 
 
-Q22. How do you sort a DataFrame by a specific column?
+## Q22. How do you sort a DataFrame by a specific column?
 A22.
-sorted_df = df.sort_values(by=['Column_name'], ascending=True)
+`sorted_df = df.sort_values(by=['Column_name'], ascending=True)`
 
-Q23. How do you create a new column in a DataFrame based on the values of another column?
+## Q23. How do you create a new column in a DataFrame based on the values of another column?
 A23.
 We can use this by apply method in dataframe
+```
 import pandas as pd
 
 df = pd.DataFrame(
@@ -370,13 +384,14 @@ df = pd.DataFrame(
     columns=['colA', 'colB', 'colC', 'colD', 'colE']
 )
 print(df)
+```
+For example, you can define your own method and then pass it to the apply() method. 
 
-For example, you can define your own method 
-and then pass it to the apply() method. 
 Let’s suppose we want to create a new column called 'ColNew' 
 that will be created based on the values of the column colC using the categorise() 
 method defined below:
 
+```
 def categorise(row):  
     if row['colC'] > 0 and row['colC'] <= 99:
         return 'A'
@@ -386,10 +401,10 @@ def categorise(row):
         return 'C'
     return 'D'
 
-All you need to do is to pass the above method to apply() as a lambda expression:
+<!-- All you need to do is to pass the above method to apply() as a lambda expression: -->
 
 df['ColNew'] = df.apply(lambda x: categorise(x), axis=1)
-
+```
 
 Q24. How do you remove duplicates from a DataFrame?
 A24.
@@ -403,14 +418,14 @@ To remove duplicates and keep last occurrences, use keep.
 df.drop_duplicates(subset=['city', 'district'], keep='last')
  
 
-Q25. What is the difference between .loc and .iloc in Pandas?
+### Q25. What is the difference between .loc and .iloc in Pandas?
 A25.loc is label-based, which means that you have to specify rows and columns based on their row and column labels.
 iloc is integer position-based, so you have to specify rows and columns by their integer position values (0-based integer position).
 
-
+```
 import pandas as pd
  
-# creating a sample dataframe
+<!-- creating a sample dataframe -->
 
 data = pd.DataFrame({'Brand': ['Maruti', 'Hyundai', 'Tata',
                                'Mahindra', 'Maruti', 'Hyundai',
@@ -426,22 +441,24 @@ data = pd.DataFrame({'Brand': ['Maruti', 'Hyundai', 'Tata',
                      'Mileage':  [28, 27, 25, 26, 28,
                                   29, 24, 21, 24]})
  
-# displaying the DataFrame
-display(data)
+<!-- displaying the DataFrame -->
+print (data)
 
-# selecting cars with brand 'Maruti' and Mileage > 25
+<!-- selecting cars with brand 'Maruti' and Mileage > 25 -->
 display(data.loc[(data.Brand == 'Maruti') & amp
                  (data.Mileage & gt
                   25)])
 
 
-# selecting range of rows from 2 to 5
+<!-- selecting range of rows from 2 to 5 -->
 display(data.loc[2: 5])
-
-The iloc() function is an indexed-based selecting method which means that we have to pass an 
+```
+1. The iloc() function is an indexed-based selecting method which means that we have to pass an 
 integer index in the method to select a specific row/column. 
-This method does not include the last element of the range passed in it unlike loc(). iloc() does not accept the boolean data unlike loc(). Operations performed using iloc() are:
+2. This method does not include the last element of the range passed in it unlike loc(). iloc() does not accept the boolean data unlike loc(). Operations performed using iloc() are:
 
-selecting 0th, 2th, 4th, and 7th index rows
+```
+Selecting 0th, 2th, 4th, and 7th index rows
 display(data.iloc[[0, 2, 4, 7]])
 
+```
