@@ -54,13 +54,13 @@ df.iloc[((df['Col1']=='Bangalore')|(df['Col1']=='Pune')),:]
 ### Q4. How do you rename columns in a Pandas DataFrame?
 
 A4. Using Rename Method
-'''
+```
 df.rename(col={'Old Name':'New Name'},inplace=True)
-'''
+```
 
 ### Q5. How do you drop columns in a Pandas DataFrame?
 A5. Using Drop Method
-'''
+```
 Lets assume we have a dataframe with Col Names A,B,C
 Dropping Single Column
 df.drop(['A'], axis=1)
@@ -68,11 +68,11 @@ df.drop(['A'], axis=1)
 Dropping Multiple Columns 
 
 Lets Drop Column B and C 
-df.drop(['B','C'], axis=1)'''
-
+df.drop(['B','C'], axis=1)
+```
 ### Q6. How do you find the unique values in a column of a Pandas DataFrame?
 A6.Using .unique() method
-'''
+```
 import pandas as pd
 data = {
   "Students": ["Bhawesh", "Hardik", "Molik", "Pradeep", "Kartikey", "Rahul", "Saksham", "Gaurav"],
@@ -83,7 +83,7 @@ data = {
 df = pd.DataFrame(data)
 print(df["Subjects"].unique())
 
-'''
+```
 
 Q7. How do you find the number of missing values in each column of a Pandas DataFrame?
 A7.We can use pandas “isna()” function to find out all the fields which have missing values. 
