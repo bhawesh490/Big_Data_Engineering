@@ -35,7 +35,7 @@ df = pd.DataFrame({'Col1':["Bangalore","Pune","Delhi","Hyderabad","Bangalore"],
 
 lets suppose we have to filter out only Bangalore city we will use this
 
-df.iloc[df['Col1']=='Bangalore',:]
+`df.iloc[df['Col1']=='Bangalore',:]`
 
 **Case 2**
 
@@ -44,9 +44,10 @@ lets assume we have to get a dataframe with Col1 as Bangalore and Col2 with Numb
 df.iloc[((df['Col1']=='Bangalore')&(df['Col2']==5)),:]
 
 **Case 3**
-lets assume we have to get a dataframe with Col1 as Bangalore or Pune 
 
-df.iloc[((df['Col1']=='Bangalore')|(df['Col1']=='Pune')),:]
+<ins>lets assume we have to get a dataframe with Col1 as Bangalore or Pune</ins> 
+
+`df.iloc[((df['Col1']=='Bangalore')|(df['Col1']=='Pune')),:]`
 
 |= OR Operator
 &= AND Operator
