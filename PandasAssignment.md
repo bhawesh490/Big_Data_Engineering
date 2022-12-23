@@ -292,10 +292,12 @@ Using Mean Method on a single column
 df=df.loc['Column Name'].mean()
 
 Using Mean Method on Multiple Columns 
-df=df.loc[['Column Name A','Column Name B']].mean()
 
-Q18. How do you calculate the standard deviation of a column in a Pandas DataFrame?
+`df=df.loc[['Column Name A','Column Name B']].mean()`
+
+### Q18. How do you calculate the standard deviation of a column in a Pandas DataFrame?
 A18.
+```
 import pandas as pd
 
 my_data = {'Name':pd.Series(['Bhawesh','Yogesh','Hardik','Kartik','Chetan']),
@@ -310,30 +312,31 @@ print("The standard deviation of column 'Age' is :")
 print(my_df['Age'].std())
 print("The standard deviation of column 'value' is :")
 print(my_df['value'].std())
-
-Q19. How do you calculate the correlation between two columns in a Pandas DataFrame?
+```
+### Q19. How do you calculate the correlation between two columns in a Pandas DataFrame?
 A19.By using corr() function we can get the correlation between two columns in the dataframe.
 dataframe[‘first_column’].corr(dataframe[‘second_column’])
 
 Note:
-1-dataframe is the input dataframe
-2-first_column is correlated with second_column of the dataframe
-
-# import pandas module
+1. dataframe is the input dataframe
+2. first_column is correlated with second_column of the dataframe
+```
+<!-- import pandas module -->
 import pandas as pd
  
-# create dataframe with 3 columns
+<!-- create dataframe with 3 columns -->
 data = pd.DataFrame({
     "column1": [12, 23, 45, 67],
     "column2": [67, 54, 32, 1],
     "column3": [34, 23, 56, 23]
 }
 )
-# display dataframe
+display dataframe
 print(data)
  
-# correlation between column 1 and column2
+<!-- correlation between column 1 and column2 -->
 print(data['column1'].corr(data['column2']))
+```
 
 ### Q20. How do you select specific columns in a DataFrame using their labels?
 A20.
@@ -362,11 +365,10 @@ The examples above illustrate the subtle difference between .iloc an .loc:
 2. .loc selects rows based on a labeled index. So, if you want to select the row with an index label of 5, you would directly use df.loc[[5]].
 
 
-## Q22. How do you sort a DataFrame by a specific column?
-A22.
-`sorted_df = df.sort_values(by=['Column_name'], ascending=True)`
+### Q22. How do you sort a DataFrame by a specific column?
+A22. `sorted_df = df.sort_values(by=['Column_name'], ascending=True)`
 
-## Q23. How do you create a new column in a DataFrame based on the values of another column?
+### Q23. How do you create a new column in a DataFrame based on the values of another column?
 A23.
 We can use this by apply method in dataframe
 ```
@@ -406,16 +408,17 @@ def categorise(row):
 df['ColNew'] = df.apply(lambda x: categorise(x), axis=1)
 ```
 
-Q24. How do you remove duplicates from a DataFrame?
+### Q24. How do you remove duplicates from a DataFrame?
 A24.
 We can use drop_duplicates(inplace=True)
 By default, it removes duplicate rows based on all columns.
 
-To remove duplicates on specific column(s), use subset.
-df.drop_duplicates(subset=['city'],inplace=True)
+**To remove duplicates on specific column(s), use subset.**
 
-To remove duplicates and keep last occurrences, use keep.
-df.drop_duplicates(subset=['city', 'district'], keep='last')
+`df.drop_duplicates(subset=['city'],inplace=True)`
+
+**To remove duplicates and keep last occurrences, use keep.**
+`df.drop_duplicates(subset=['city', 'district'], keep='last')`
  
 
 ### Q25. What is the difference between .loc and .iloc in Pandas?
