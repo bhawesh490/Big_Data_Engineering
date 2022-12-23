@@ -10,7 +10,7 @@ print(df.to_string())
 
 ### Q2. How do you check the data type of a column in a Pandas DataFrame?
 A2. We can check the data type of column in Pandas using below code
-'''
+```
 <!-- importing pandas package -->
 import pandas as pd
 <!-- create a Pandas DataFrame -->
@@ -22,7 +22,7 @@ print(df)
 <!-- apply the dtype attribute -->
 result = df.dtypes
 print("Types of Columns in dataframe is")
-print(result)'''
+print(result)```
 
 Q3. How do you select rows from a Pandas DataFrame based on a condition?
 A3.lets assume we have a dataframe like 
