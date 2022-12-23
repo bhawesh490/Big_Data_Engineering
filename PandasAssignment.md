@@ -47,7 +47,8 @@ df.iloc[((df['Col1']=='Bangalore')&(df['Col2']==5)),:]
 lets assume we have to get a dataframe with Col1 as Bangalore or Pune 
 
 df.iloc[((df['Col1']=='Bangalore')|(df['Col1']=='Pune')),:]
-|= OR Operator 
+
+|= OR Operator
 &= AND Operator
 
 
@@ -85,56 +86,67 @@ print(df["Subjects"].unique())
 
 ```
 
-Q7. How do you find the number of missing values in each column of a Pandas DataFrame?
+### Q7. How do you find the number of missing values in each column of a Pandas DataFrame?
 A7.We can use pandas “isna()” function to find out all the fields which have missing values. 
-This will return True if a field has missing values and false if the field does not have missing values.
+
+This will return True if a field has missing values and false if the field does not 
+have missing values.
+```
 df.isna().sum().reset_index(name="n").
+<!-- This will give Column wise count of null values in df dataframe -->
+```
 
-This will give Column wise count of null values in df dataframe
-
-Q8. How do you fill missing values in a Pandas DataFrame with a specific value?
-A8.Using "fillna('Replaced Value',inplace=True)
+### Q8. How do you fill missing values in a Pandas DataFrame with a specific value?
+A8.
+Using "fillna('Replaced Value',inplace=True)
 Example:
 We have a dataframe named df which contains some null values 
 we need to replace na values with a string called 'Missing Values' so we will use this command 
 df.fillna('Missing Values',inplace=True)
 
-Q9. How do you concatenate two Pandas DataFrames?
+### Q9. How do you concatenate two Pandas DataFrames?
 A9.We can use the concat function in pandas to append either columns or rows from one DataFrame to another. 
 
 Let’s grab two subsets of our data to see how this works.
 
-1)Read in first 10 lines of students table
+1. Read in first 10 lines of students table
 students_sub = students_df.head(10)
 
-2)Grab the last 10 rows
+2. Grab the last 10 rows
 students_sub_last10 = students_df.tail(10)
 
-3) Reset the index values to the second dataframe appends properly
+3. Reset the index values to the second dataframe appends properly
 
+```
 students_sub_last10 = students_sub_last10.reset_index(drop=True)
+```
+*Note: drop=True option avoids adding new index column with old index values*
 
-Note: drop=True option avoids adding new index column with old index values
-
-Important Notes on Axis
+**Important Notes on Axis**
 
 When we concatenate DataFrames, we need to specify the axis.
 axis=0 tells pandas to stack the second DataFrame UNDER the first one. 
+
 It will automatically detect whether the column names are the same and will stack accordingly. 
 axis=1 will stack the columns in the second DataFrame to the RIGHT of the first DataFrame. 
 To stack the data vertically, we need to make sure we have the same columns 
 and associated column format in both datasets. 
+
 When we stack horizontally, we want to make sure what we are doing makes sense 
 (i.e. the data are related in some way).
 
 
-# Stack the DataFrames on top of each other
+Stack the DataFrames on top of each other
+
+```
 vertical_stack = pd.concat([student_sub, student_sub_last10], axis=0)
+```
 
 
-# Place the DataFrames side by side
+Place the DataFrames side by side
+```
 horizontal_stack = pd.concat([student_sub, student_sub_last10], axis=1)
-
+```
 
 Q10. How do you merge two Pandas DataFrames on a specific column?
 A10.
