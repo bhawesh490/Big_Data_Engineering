@@ -1,7 +1,8 @@
 ### Q1. How do you load a CSV file into a Pandas DataFrame?
 A1.Lets assume we have a csv file name bhawesh.csv \
-`import pandas as pd
-df = pd.read_csv('bhawesh.csv')
+
+`import pandas as pd \
+df = pd.read_csv('bhawesh.csv') \
 print(df.to_string())`
 
 
