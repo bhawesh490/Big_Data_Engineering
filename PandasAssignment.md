@@ -33,13 +33,13 @@ df = pd.DataFrame({'Col1':["Bangalore","Pune","Delhi","Hyderabad","Bangalore"],
 
 **Case 1**
 
-lets suppose we have to filter out only Bangalore city we will use this
+<ins>lets suppose we have to filter out only Bangalore city we will use this</ins?>
 
 `df.iloc[df['Col1']=='Bangalore',:]`
 
 **Case 2**
 
-lets assume we have to get a dataframe with Col1 as Bangalore and Col2 with Number 5 
+<ins>lets assume we have to get a dataframe with Col1 as Bangalore and Col2 with Number 5</ins> 
 
 df.iloc[((df['Col1']=='Bangalore')&(df['Col2']==5)),:]
 
@@ -108,7 +108,7 @@ df.fillna('Missing Values',inplace=True)
 ### Q9. How do you concatenate two Pandas DataFrames?
 A9.We can use the concat function in pandas to append either columns or rows from one DataFrame to another. 
 
-Let’s grab two subsets of our data to see how this works.
+<ins>Let’s grab two subsets of our data to see how this works.</ins>
 
 1. Read in first 10 lines of students table
 students_sub = students_df.head(10)
@@ -126,6 +126,7 @@ students_sub_last10 = students_sub_last10.reset_index(drop=True)
 **Important Notes on Axis**
 
 When we concatenate DataFrames, we need to specify the axis.
+
 axis=0 tells pandas to stack the second DataFrame UNDER the first one. 
 
 It will automatically detect whether the column names are the same and will stack accordingly. 
@@ -137,7 +138,7 @@ When we stack horizontally, we want to make sure what we are doing makes sense
 (i.e. the data are related in some way).
 
 
-Stack the DataFrames on top of each other
+<ins>Stack the DataFrames on top of each other</ins>
 
 ```
 vertical_stack = pd.concat([student_sub, student_sub_last10], axis=0)
@@ -145,6 +146,7 @@ vertical_stack = pd.concat([student_sub, student_sub_last10], axis=0)
 
 
 Place the DataFrames side by side
+
 ```
 horizontal_stack = pd.concat([student_sub, student_sub_last10], axis=1)
 ```
