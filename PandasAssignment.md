@@ -148,47 +148,55 @@ Place the DataFrames side by side
 horizontal_stack = pd.concat([student_sub, student_sub_last10], axis=1)
 ```
 
-Q10. How do you merge two Pandas DataFrames on a specific column?
-A10.
-The pandas function for performing joins is called merge and an Inner join is the default option:
-Inner Join Example:
+### Q10. How do you merge two Pandas DataFrames on a specific column?
+A10.The pandas function for performing joins is called merge and an Inner join is the default option:
+
+**Inner Join Example:**
 lets assume we have two dataframes named df1 and df2 with a common column 'city'
 merged_inner = pd.merge(left=df1, right=df2, left_on='city', right_on='city')
 
-Left joins
+**Left joins:**
+
 What if we want to add information from df1 to df2 without losing any of the information from df1? 
 In this case, we use a different type of join called a  “left join”.
 
+```
 merged_left = pd.merge(left=df1, right=df2, how='left', left_on='city', right_on='city')
+```
 
-The pandas merge function supports two other join types:
+**The pandas merge function supports two other join types:**
 
-1-Right (outer) join: Invoked by passing how='right' as an argument. 
+1. Right (outer) join: Invoked by passing how='right' as an argument. 
 Similar to a left join, except all rows from the right DataFrame are kept, while rows from the left DataFrame without matching join key(s) values are discarded.
-2-Full (outer) join: Invoked by passing how='outer' as an argument.
+2. Full (outer) join: Invoked by passing how='outer' as an argument.
 This join type returns the all pairwise combinations of rows from both DataFrames; i.e., 
 the result DataFrame will NaN where data is missing in one of the dataframes. 
 This join type is very rarely used.
 
-Q11. How do you group data in a Pandas DataFrame by a specific column and apply an aggregation function?
+### Q11. How do you group data in a Pandas DataFrame by a specific column and apply an aggregation function?
+
 A11.Lets assume we have a dataframe named df containing multiple columns 
-df=df.groupby(['city', 'District']).agg({"Population": 'min',
+```
+df=df.groupby(['city', 'district']).agg({"Population": 'min',
                                            "Age": 'median',
                                            "Litrecay": 'mean'})
 
+```
 
-Q12. How do you pivot a Pandas DataFrame?
-A12.The pivot() function is used to reshaped a given DataFrame organized by given index / column values. 
+### Q12. How do you pivot a Pandas DataFrame?
+A12.The **pivot()** function is used to reshaped a given DataFrame organized by given index / column values. 
 This function does not support data aggregation, multiple values will result in a MultiIndex in the columns.
-Syntax:
+```
+**Syntax:**
+
 DataFrame.pivot(index=None, columns=None, values=None)
 index:Column to use to make new frame’s index. If None, uses existing index.
 columns:Column to use to make new frame’s columns
-	
 values:Column(s) to use for populating new frame’s values.
 If not specified, all remaining columns will be used and the result will have hierarchically indexed columns.
-
-Example:
+```
+```
+**Example:**
 df = pd.DataFrame({'aaa': ['one', 'one', 'one', 'two', 'two',
                            'two'],
                    'bbb': ['P', 'Q', 'R', 'P', 'Q', 'R'],
@@ -197,6 +205,7 @@ df = pd.DataFrame({'aaa': ['one', 'one', 'one', 'two', 'two',
 
 
 df.pivot(index='aaa', columns='bbb', values='ccc')
+```
 
 Q13. How do you change the data type of a column in a Pandas DataFrame?
 A13.DataFrame.astype() method is used to cast pandas object to a specified dtype. 
