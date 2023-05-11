@@ -1,0 +1,31 @@
+from pyspark.sql import SparkSession
+from pyspark.sql.types import StructType,StructField,StringType,IntegerType
+if __name__=='__main__':
+    # creating spark session
+    spark=SparkSession.builder.master("spark://localhost:7077").appName('batch1_demo').getOrCreate()
+
+    # create list of data to prepare the dataframe
+    person_list=[("Bhawesh","","Allen",1,"M"),
+                    ("Yogesh","King","",2,"M"),
+                ("Saumya","","Willain",2,"F")]
+
+    # defining schema for dataset
+    schema=StructType([\
+        StructField("first_name",StringType(),True),\
+        StructField("middle_name",StringType(),True),\
+        StructField("last_name",StringType(),True),\
+        StructField("id",IntegerType(),True),\
+        StructField("gender",StringType(),True),\
+        ])
+
+    # True Means thaht we can store null values in that
+
+    # creating spark dataframe 
+    df=spark.createDataFrame(data=person_list,schema=schema)
+    # printing dataframe schema
+    df.printSchema()
+    # printing data
+    df.show(truncate=False)
+    
+    # writing file in hdfs file system
+    df.write.csv("record.csv")
